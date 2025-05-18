@@ -17,9 +17,13 @@ jobs:
 
       - name: Install dependencies
         run: go mod tidy
+        working-directory: app
 
       - name: Run tests
         run: go test ./...
+        working-directory: app
 
       - name: Build
         run: go build -o app .
+        working-directory: app
+
